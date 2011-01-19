@@ -1,0 +1,1019 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" dslVersion="1.0.0.0" Id="4d97f94d-76f9-4188-b7b0-1785fa325687" name="ScorpioBtControl" linkedPackageId="444f0a20-3401-4cd9-99bd-c37c1bf60430" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="f4d8d4bb-a3e9-4c52-be09-ee5853d67539" name="ScorpioBtControl" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ae347bb0-6945-487e-b553-b295f8355d40" />
+        <targetEnds>
+          <association Id="d100eb9c-5dfe-4b55-bea2-48d42140beba" isDerived="false" sourceEndRoleName="ScorpioBtControl" targetEndRoleName="NxtBrick" isLeaf="false" isAbstract="false">
+            <classMoniker Id="bdd75fdd-8fea-49b3-8fcd-3a797f9417d9" LastKnownName="NXTBrick" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8e124d84-ce24-4775-8432-707bb828fa6e" name="ScorpioBtControl" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="0c17a175-8e85-4397-a204-d5919f3fb0f6" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="7b3ccb19-4884-4efb-a045-4e2d5e9dc659" name="NxtBrick" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="2a11b393-a0d9-4f94-bc28-eee830ca186e" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="3a6dea2d-2954-45ed-bb74-8251c3d66d5e" />
+          </association>
+          <association Id="4d628f50-3d07-4ca4-a671-142dafc1ea8d" isDerived="false" sourceEndRoleName="" targetEndRoleName="LightSensor" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4cade896-a65a-4dd9-951b-eb2e5a6b86b9" LastKnownName="LightSensor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ce8ef4e7-df10-46a5-bb13-d8d84333f7c2" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="6070b877-2f69-46ee-be23-1db6c9cd314a" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="8333ccfd-17e7-43dc-b0bf-7f78bbe57776" name="LightSensor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="c8eacae5-113d-462e-be4c-7ee59b5b3b67" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="220e7f3d-ec71-40a3-bc4a-3f7c7e3b8a6a" />
+          </association>
+          <association Id="d8493910-387e-4ec8-91db-f98c5bad50f4" isDerived="false" sourceEndRoleName="" targetEndRoleName="SoundSensor" isLeaf="false" isAbstract="false">
+            <classMoniker Id="739884e1-305d-4fb0-acb8-aeca6d009d69" LastKnownName="SoundSensor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="f8323569-740b-481f-ac96-df1a36d33532" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="bb6ac402-50dd-4ba5-bade-b4111488e57f" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="2c260688-b5c7-41f1-8377-27da0855f126" name="SoundSensor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="0d42f891-811d-4024-97c1-0911783462af" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="ac29ca96-b880-43e4-ab2f-b4ffb6c7dc2c" />
+          </association>
+          <association Id="6e87b069-0f51-4727-99ca-ff5336c2fe37" isDerived="false" sourceEndRoleName="ScorpioBtControl" targetEndRoleName="TouchSensor" isLeaf="false" isAbstract="false">
+            <classMoniker Id="cbd873cd-82da-40a7-8bde-df945f8a13dc" LastKnownName="TouchSensor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e53124f0-b47b-4d20-b55b-9deb049e323e" name="ScorpioBtControl" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="56607dab-937c-4183-8d78-e5c6e468e477" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="697c1b34-5971-41d1-9a37-20bfb3d332b8" name="TouchSensor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="25e6636b-d9ae-47ff-9480-c38b5f9f4d4d" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="2a54be48-db44-42eb-8836-40cb3c5934f9" />
+          </association>
+          <association Id="83615210-f44e-4f97-a28f-2d15743fea03" isDerived="false" sourceEndRoleName="" targetEndRoleName="UltrasonicSensor" isLeaf="false" isAbstract="false">
+            <classMoniker Id="4ffa3b1b-7d0b-4e9a-9991-52b5b5c103bc" LastKnownName="UltrasonicSensor" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="e5463ccd-fa11-4235-bf63-87263e7d86ee" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="2ece17bc-e0de-4d12-829a-b10e10583418" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="6f65d1e1-3044-47a3-abe1-aaa69a583ca2" name="UltrasonicSensor" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="4221c7c3-6f42-482b-8749-8f0035f90220" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e661c9c3-280e-4130-9fbe-13a199c2b261" />
+          </association>
+          <association Id="e840c261-2423-4df5-a8d9-13b42d93a849" isDerived="false" sourceEndRoleName="ScorpioBtControl" targetEndRoleName="TwoMotorWalk" isLeaf="false" isAbstract="false">
+            <classMoniker Id="e08f3c81-7dd1-4010-8f93-7db827ea505e" LastKnownName="TwoMotorWalk" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="49fff3a0-4f6e-4825-a05c-5d0eedaf4d8e" name="ScorpioBtControl" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="Composite" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="612291cc-7677-45c7-9706-627d064a5ca0" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="4356b737-4464-4fa8-b877-2de3bc53e140" name="TwoMotorWalk" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="true">
+                  <elementDefinition Id="05f6f757-a95f-4a29-8918-e5b6252c0593" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="44510f60-445e-4f86-b0ac-312e01382983" />
+          </association>
+        </targetEnds>
+        <ownedOperationsInternal>
+          <operation Id="efa08fdf-7b70-4aff-89fb-970704ef68df" name="Init" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="39f7e376-fc84-4ab9-8efa-a53dc5b50a46" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <Interface Id="b265ffe2-9b5c-4482-b97a-62409427334c" name="IWalk" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="2970e1aa-3f5f-4329-88b0-15087ddebc30" />
+        <ownedOperations>
+          <operation Id="201100f9-0a06-4695-9f2f-eda588b329ef" name="StartTurnAround" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7dcabe52-990d-4254-aae5-91175bb14dc1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d5efa872-71ca-4a87-a77a-5c900dc189d5" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="c47c10f5-0464-4098-9ade-4b4a57b8a8ff" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8e94daa2-7e76-44ed-9158-0b3faf76608a" name="clockwise" direction="In" isUnique="false">
+                  <elementDefinition Id="80b690f8-0b49-4968-8fee-4be667041bee" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="056402de-3c30-43d3-b9e3-c54d590ffc18" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="40b47b18-060a-43e6-b0d0-c3f010ff7e62" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="16c6504c-f593-4801-abab-c35df75c5a6c" name="StartSyncWalk" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="b68c2f65-bf01-4314-a3a1-df039f6aa9b4" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="83a8a2c1-d0f6-4e1c-8781-450df3d88ae4" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="0411a9a3-16cc-4542-bb5f-5a7be0e78f89" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5fbadff2-2d99-4ae2-8c16-8e30f60e8925" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="de8818c3-a77a-422f-a711-d65f5da7b2e6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="1f184a2a-b309-4500-b36f-03572cd75be9" name="StopWalk" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="fd4d7810-fe28-4eef-a8f7-5f8b79fb4168" />
+          </operation>
+          <operation Id="55f7bd9c-d1cf-40e5-a427-15c477b1063e" name="StartTurn" isLeaf="false" isStatic="false" isAbstract="true" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="679efc1f-5df1-4a66-8799-0525d17a3691" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1c81b6cf-2ed2-4c56-a91a-31305bd8e0c1" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="cfb27465-8297-406e-900d-101bc4fb4dfb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cfa45a79-8c3d-4e80-a7f9-77a82f91d6df" name="clockwise" direction="In" isUnique="false">
+                  <elementDefinition Id="1dc3e303-9c27-48a3-abbe-ca99fd5b38f9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b6d6850a-af7b-412a-a0dc-0297d3db92fb" name="radiusRate" direction="In" isUnique="false">
+                  <elementDefinition Id="a6e620c5-6111-488e-9403-0ce15bded553" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="803f78a1-c069-43cf-84b3-ad35cd40bd52" LastKnownName="float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="898c2047-f3eb-4b82-b75c-175a2c7988c3" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="f19f2b3f-3295-4539-ace4-dc1b770487e1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperations>
+      </Interface>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="bdd75fdd-8fea-49b3-8fcd-3a797f9417d9" name="NXTBrick" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3974b4f9-caff-473e-a28f-b0635fb4d0c5" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="3d7208f8-114b-47b7-a917-6ea4a4b04fcd" name="TimeSpan" isAbstract="false" isLeaf="false" cachedFullName="TimeSpan">
+        <elementDefinition Id="e855f50d-3e83-4798-a1da-7daeace92963" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" name="int" isAbstract="false" isLeaf="false" cachedFullName="int">
+        <elementDefinition Id="481eae41-c3c1-43af-b8b1-f3ab581f1870" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="f6845a72-dce2-4be6-9948-eb61db921f2c" name="bool" isAbstract="false" isLeaf="false" cachedFullName="bool">
+        <elementDefinition Id="9901d314-f408-47ef-a4ec-253757a8802a" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="803f78a1-c069-43cf-84b3-ad35cd40bd52" name="float" isAbstract="false" isLeaf="false" cachedFullName="float">
+        <elementDefinition Id="f6dd2ad5-2d9f-4557-989f-cd32b34665d9" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="909ed0b0-698f-4199-9e32-a4ce74d0afd1" name="NXTBrick.Sensor" isAbstract="false" isLeaf="false" cachedFullName="Modeling::AForge.Robotics.Lego::NXTBrick.Sensor">
+        <elementDefinition Id="c3324de4-8976-47cd-ad8a-596467fc339e" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b8f45efb-aa20-48fb-b459-3b3557935bcb" name="NXTBrick.Motor" isAbstract="false" isLeaf="false" cachedFullName="Modeling::AForge.Robotics.Lego::NXTBrick.Motor">
+        <elementDefinition Id="b8ca35c8-1bb9-4d8c-a2d4-d029c7d465c4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="e08f3c81-7dd1-4010-8f93-7db827ea505e" name="TwoMotorWalk" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="236418aa-ce6f-4b20-a074-75a79b01c977" />
+        <suppliersInternal>
+          <interfaceRealization Id="1081fb80-2a1e-42f3-9d5d-94b242edf785">
+            <interfaceMoniker Id="b265ffe2-9b5c-4482-b97a-62409427334c" LastKnownName="IWalk" />
+            <elementDefinition Id="0e793b88-e2c3-4722-9f50-81ea6cc214a1" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="540453da-1658-4692-9ff7-e7a6c46709fe" name="LeftMotor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="18ab3c4e-e058-4ea3-9e02-c520164ab95a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b8f45efb-aa20-48fb-b459-3b3557935bcb" LastKnownName="NXTBrick.Motor" />
+            </type_NamedElement>
+          </property>
+          <property Id="63c4154f-0131-4a4b-8637-418b198c0a5c" name="RightMotor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="1ca1bd25-cc9b-407e-bdbb-f2126fc5d4e1" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b8f45efb-aa20-48fb-b459-3b3557935bcb" LastKnownName="NXTBrick.Motor" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="15f774a1-1756-4255-8799-0f5362e304a1" name="StartTurnAround" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="bae52c48-4ef3-4383-86ed-fab8ddd43fc6" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="8fc7bae0-9075-4e8f-a35b-593ba1a96ef8" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="22d2e534-92db-4f6c-8809-eef6389d0744" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="e1c6fc20-f68e-45cf-8900-8890a4d01637" name="clockwise" direction="In" isUnique="false">
+                  <elementDefinition Id="8ade5247-919a-49c5-9301-7a9d90325ca3" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="7ac9bd06-99d8-4350-b95c-666356b403f7" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="0bf5fb73-81d6-420e-99bb-06034046cbdd" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="8f67072a-18db-460e-8758-b0cd449342a7" name="StartSyncWalk" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="e01e23a7-f733-4aa2-97d8-56761556a66a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="4d05f645-d22c-4068-b0ab-f4fc014fa1e6" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="e92c9d88-01a6-4153-a272-45ce599e3dd0" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="fb4a3f75-7198-47a3-87e9-18aba08afb85" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="b4783451-fe5e-467b-a756-c139af7ac764" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="14d3393b-29b1-4489-b6dd-cbfda6362e9b" name="StopWalk" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3e1fc727-dd6d-4953-bcfb-91299bbce10d" />
+          </operation>
+          <operation Id="824a8b39-5cea-4e17-8a8b-f3054a6d4171" name="StartTurn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ac34011c-07b3-489e-90a9-a28d89ea22fc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b27eafbc-ac1b-4fca-a20d-449cb9158612" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="61abda39-2eb0-4932-8ee9-261b85c13c95" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="5a1d8b4b-6e5a-4378-96cc-a24163ba32eb" name="clockwise" direction="In" isUnique="false">
+                  <elementDefinition Id="e08b35b3-f021-4b95-b1bb-c903fb0d19cb" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="41847f52-c83a-4f65-b15e-b85693f8e95f" name="radiusRate" direction="In" isUnique="false">
+                  <elementDefinition Id="d437b800-d2d4-4b47-aa1e-d2330af53440" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="803f78a1-c069-43cf-84b3-ad35cd40bd52" LastKnownName="float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="d74ac931-37cf-4916-9111-d813ebf04890" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="01df2fbf-bace-4619-8620-84676b3a21dc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="323933ed-31b7-4012-8a63-c2835894071a" name="TwoMotorWalkGenetic" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="282eccac-0f0d-404a-b79d-87b58ba7c66d" />
+        <suppliersInternal>
+          <interfaceRealization Id="daadd8ff-1eee-4aeb-a80b-6abbd931313b">
+            <interfaceMoniker Id="b265ffe2-9b5c-4482-b97a-62409427334c" LastKnownName="IWalk" />
+            <elementDefinition Id="828f7652-b5b0-4bd4-b2e6-1836ac53068e" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="b5e46cc2-535e-427f-b13c-67ff6ec4b7f2" name="LeftMotor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d6c9ac3a-8e47-48fd-a567-63f7bb8b5db9" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b8f45efb-aa20-48fb-b459-3b3557935bcb" LastKnownName="NXTBrick.Motor" />
+            </type_NamedElement>
+          </property>
+          <property Id="16f86528-1b46-4820-8f8f-0d24191382b1" name="RightMotor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="19bdde9c-9bb7-49e4-956e-e1f8b6ea3560" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b8f45efb-aa20-48fb-b459-3b3557935bcb" LastKnownName="NXTBrick.Motor" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="19bba178-4ea2-4931-93f5-d504d97ff6c0" name="StartTurnAround" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0e8b4639-2cee-4206-82cc-807fbb1c39eb" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="53438854-4b32-40bf-9846-4d889c52d73c" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="13c16602-3bfe-446b-a2f6-5070c4c89724" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9ab9e5c3-92e8-4e6b-9aa7-b28f275b92f0" name="clockwise" direction="In" isUnique="false">
+                  <elementDefinition Id="dfc20bdf-65f9-428a-ae94-345316b9a0af" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="b6345824-8d1b-4ae3-adce-a7c96d24ff9c" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="22767ebd-0c60-4f0f-a520-1d8f1bfec024" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="7739526a-0007-41a7-8a0e-ba4b7cb1d38a" name="StartSyncWalk" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="46662392-4bd3-4f92-83ca-39428cf1baa1" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9f5f278b-ff31-4e57-b510-4aaa0526c575" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="8acabdc3-34c4-4511-850f-fc4b4c5c0241" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="c5cd680a-69f4-4bd6-820e-f355c3299697" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="300c5f1f-f960-4422-a894-10a3a9a57c4e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="53b0f192-b3db-4f82-8660-fc63d99f6e30" name="StopWalk" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="482732fe-8aa1-4ff4-a55a-9cd098b05b48" />
+          </operation>
+          <operation Id="75a2919e-1532-4a91-b79a-8fe482b7d4d6" name="StartTurn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c95f3ef1-f980-4994-ba5c-2ffb9b6d9881" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="01e6e637-671e-413c-aa49-86fc9cc464d6" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="bcedcc5f-a30e-48a6-bac8-5c4a8239fa49" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0c94a13e-4b6a-424b-8655-40b0270920cd" name="clockwise" direction="In" isUnique="false">
+                  <elementDefinition Id="4f8e730d-bcca-4577-9906-e0c3dc3929b2" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="1bf3490b-edf8-4dce-abce-7ed551b1ce26" name="radiusRate" direction="In" isUnique="false">
+                  <elementDefinition Id="b1ee2c11-822d-4ecc-9194-e634fff1d89b" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="803f78a1-c069-43cf-84b3-ad35cd40bd52" LastKnownName="float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="35240d5c-42fd-47b3-86d5-ffaa4b799ff8" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="725300d2-dd35-4e90-9b89-c4f01ddabeb9" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="5ea921fc-ce93-43fe-97ad-bc4b94e5a4ad" name="ThreeMotorWalk" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6462a4c1-870c-4da9-b224-b1d3d113ff24" />
+        <suppliersInternal>
+          <interfaceRealization Id="e2c549e6-d43d-4853-955a-3ae8f065ada2">
+            <interfaceMoniker Id="b265ffe2-9b5c-4482-b97a-62409427334c" LastKnownName="IWalk" />
+            <elementDefinition Id="bf1617bc-6ac7-48e4-acde-508ec1865929" />
+          </interfaceRealization>
+        </suppliersInternal>
+        <ownedAttributesInternal>
+          <property Id="7b7df7ad-3b23-4317-8b1d-aec878f9f0e6" name="RightMotor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="4c43b0ba-9a7d-46e8-8048-341d09e5562a" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b8f45efb-aa20-48fb-b459-3b3557935bcb" LastKnownName="NXTBrick.Motor" />
+            </type_NamedElement>
+          </property>
+          <property Id="f218efad-cf6b-49b7-97ca-336420560e5b" name="LeftMotor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d97c84b5-a9e6-41af-8e35-a56e10130c90" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="b8f45efb-aa20-48fb-b459-3b3557935bcb" LastKnownName="NXTBrick.Motor" />
+            </type_NamedElement>
+          </property>
+          <property Id="530fc153-e659-4ee3-8863-31ec7eecb68e" name="CentreMotor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="8393542c-744e-433b-8aee-70d5dbb1d15e" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="dca2736e-5777-4368-bc45-fde5cacc683c" LastKnownName="NXTBrick.Motor" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="6f6298c6-980d-4a6f-9737-e76e0020426a" name="StartTurnAround" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="ca020dd5-6373-443f-bccc-513315dc1a0f" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="88a0234c-b301-45bc-81b3-d342e3f977b3" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="97bb7bc0-ed1d-480f-a1f0-3d0ded388e03" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="cc230a1b-e8cb-4587-b50b-0190dbc6e6a8" name="clockwise" direction="In" isUnique="false">
+                  <elementDefinition Id="f87a9ce2-9997-4895-a52e-55eea3e4b6f6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="67bb6a8a-7ac0-4863-a118-87233a7eac61" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="2ab2e9ef-c926-4f79-aa6d-1a5e43f30df6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="a7b49944-b60b-439c-8c00-5fd2893a3102" name="StartSyncWalk" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="91608476-2ab2-4290-ac96-3fae43e84cbc" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="55834ffe-16df-466a-9f0c-4c8c79ab2e91" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="5c70cfb9-6ca5-4e4b-b936-4b9f2d33f4ce" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="57bebe78-c277-4e8f-98b9-31bbcada5e21" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="f85643aa-c3e5-400b-8e51-149ba03115c5" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="38322a95-e062-4473-b0d3-2146be6948d2" name="StopWalk" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="c17fcbb5-87df-4c65-b2e9-a5d97a726b1d" />
+          </operation>
+          <operation Id="b7d5c335-fec3-4320-85c8-9db9f8ece675" name="StartTurn" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="a320e2c0-f2ad-401f-9f4a-823189b1f295" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="0b7ff2b1-4422-4b4b-8665-acb5b86ffa51" name="power" direction="In" isUnique="false">
+                  <elementDefinition Id="f9f3e494-e334-45bc-8f62-b69a2412aaf6" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="bba9cf0d-9233-418c-8c8c-e446554b6b6d" LastKnownName="int" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="295094f0-4ffd-4e68-ad0f-faca6cb3ac31" name="clockwise" direction="In" isUnique="false">
+                  <elementDefinition Id="63ba97d7-ee8d-476e-ac5d-03d0cf121c7c" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="467b054e-90fb-41f2-9b49-23079cf2c290" name="radiusRate" direction="In" isUnique="false">
+                  <elementDefinition Id="dbba4fc1-8972-435e-8265-9433502e706e" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="803f78a1-c069-43cf-84b3-ad35cd40bd52" LastKnownName="float" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="00db6b77-b894-43e1-bb04-3fb72ad185b7" name="forward" direction="In" isUnique="false">
+                  <elementDefinition Id="c9a019ab-82a5-4200-b282-bc90515218be" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="f6845a72-dce2-4be6-9948-eb61db921f2c" LastKnownName="bool" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="dca2736e-5777-4368-bc45-fde5cacc683c" name="NXTBrick.Motor" isAbstract="false" isLeaf="false" cachedFullName="Modeling::AForge.Robotics.Lego::NXTBrick.Motor">
+        <elementDefinition Id="b8ca35c8-1bb9-4d8c-a2d4-d029c7d465c4" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="1416156d-af9c-46dd-b308-c5b1471ef329" name="PollingSensor" isAbstract="true" isLeaf="false" isActiveClass="false">
+        <appliedStereotypesInternal>
+          <stereotypeInstance Id="9c22eeea-40cd-43f1-8bcb-129b0d84df6c" name="class" profile="CSharpProfile">
+            <elementDefinition Id="3338c96d-84bb-4be6-9d7d-33c4f4e434e9" />
+            <propertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="4e52be22-20a7-4563-bfc9-8a08fdf5a638">
+                <propertyInstance Id="b1873007-f0c8-4c21-b27e-9f04862c9b36" name="ClrAttributes">
+                  <elementDefinition Id="0afaf213-8386-4c8a-a61d-f4f6fde8e436" />
+                </propertyInstance>
+                <elementDefinition Id="e7e6a252-a6c6-4cec-ae77-908c47a19150" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="05c3eaa9-908a-4f5e-bad7-14b6ab4d0a87">
+                <propertyInstance Id="0d972584-a7bd-40ff-adee-49c5c40cc1c4" name="IsPartial" value="false">
+                  <elementDefinition Id="652b6970-d972-4d07-afd1-0d2542a972d1" />
+                </propertyInstance>
+                <elementDefinition Id="2f568a18-ac5b-4efc-a4d3-2803bf1c7fac" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="13ffdfb6-ca87-427d-9fb0-bd79af50b29b">
+                <propertyInstance Id="8960e205-524a-4e95-b15d-fd8b5526b8e8" name="IsStatic" value="false">
+                  <elementDefinition Id="cf98ad0c-9440-4776-ab8e-9176482b6add" />
+                </propertyInstance>
+                <elementDefinition Id="6ac3d63d-70cb-40ee-ac6d-abd26df78d1b" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="fb0ebfe4-b406-485e-b462-badcf82c1fa1">
+                <propertyInstance Id="5d0a3c9e-0e69-4585-a4fd-693c3e6fe92b" name="IsUnsafe" value="false">
+                  <elementDefinition Id="1495058a-60c9-4b39-bf9d-d9d6af8c0374" />
+                </propertyInstance>
+                <elementDefinition Id="61556e43-9109-4d27-86a8-11cff0d3a94f" />
+              </stereotypeInstanceHasPropertyInstances>
+              <stereotypeInstanceHasPropertyInstances Id="564b6039-aefa-4f78-a9b1-42bd10707332">
+                <propertyInstance Id="5667907e-a32f-4ad7-98b9-b2cf382f761e" name="PackageVisibility" value="internal">
+                  <elementDefinition Id="5111b146-e090-4606-b546-07c6ed57c988" />
+                </propertyInstance>
+                <elementDefinition Id="89efba7e-a0ba-4323-96ae-2f628c7a8a7f" />
+              </stereotypeInstanceHasPropertyInstances>
+            </propertyInstances>
+          </stereotypeInstance>
+        </appliedStereotypesInternal>
+        <elementDefinition Id="3a07ecd0-53c8-4803-bcea-e8bc96f206ca" />
+        <ownedRedefinableTemplateSignatureInternal>
+          <redefinableTemplateSignature Id="925a72f8-c5a2-417d-8684-fd0a18ec87d2" parameters="" isLeaf="false">
+            <elementDefinition Id="37f81373-29b4-42ca-b0ed-0ea7cc1e5335" />
+            <ownedParameters>
+              <classifierTemplateParameter Id="918709b4-1a51-41ea-af6d-07d7d1a2a2ce" allowSubstitutable="false">
+                <elementDefinition Id="35430adc-4c89-46a3-a2d3-68e9d0c2b835" />
+                <ownedParameterableElement>
+                  <class Id="bddcdae5-190d-47f6-8cd3-3140c70e5d1a" name="TSensorVal" isAbstract="false" isLeaf="false" isActiveClass="false">
+                    <elementDefinition Id="f1b575c5-a006-433c-a3a8-cc18650cad84" />
+                  </class>
+                </ownedParameterableElement>
+              </classifierTemplateParameter>
+            </ownedParameters>
+          </redefinableTemplateSignature>
+        </ownedRedefinableTemplateSignatureInternal>
+        <ownedAttributesInternal>
+          <property Id="d15acdb5-0242-4584-a053-4d59d58033af" name="SensorPoller" visibility="Protected" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="fa65234a-ebb8-44bd-b718-07e041213ce0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="e15d02d0-c29f-4b9f-8e3b-7e60e79838f8" LastKnownName="Task" />
+            </type_NamedElement>
+          </property>
+          <property Id="d04ae505-767e-45cd-bac2-1fe79b70383e" name="OnChange" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="10f96773-4ce4-4e9b-9b60-d1aef7858d12" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="28d8f794-840f-4904-9215-db6bbb724628" LastKnownName="event&lt;TSensorVal&gt;" />
+            </type_NamedElement>
+          </property>
+          <property Id="c75ad138-e9bf-40fe-b7f8-3fc8b88c4827" name="Sensor" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="042a14e5-ca01-4fdc-abd4-8ce3ce8f16f0" />
+            <type_NamedElement>
+              <referencedTypeMoniker Id="909ed0b0-698f-4199-9e32-a4ce74d0afd1" LastKnownName="NXTBrick.Sensor" />
+            </type_NamedElement>
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="08e85735-6a14-4898-adf0-9dde1964804b" name="StartSensing" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="3e8dfad0-4427-4c4a-ae4d-e3cfd8b62221" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9893a358-e6b2-4729-b459-d1bd3defaea2" name="timeRes" direction="In" isUnique="false">
+                  <elementDefinition Id="ac1f201e-5272-44eb-bf66-90f5bf27deb1" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="3d7208f8-114b-47b7-a917-6ea4a4b04fcd" LastKnownName="TimeSpan" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="4a78486b-a7b4-4894-b51a-ecbf2288b6e1" name="StopSensing" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="37de0408-801c-4386-a940-5900d764a68b" />
+          </operation>
+          <operation Id="f461534e-b319-4dc4-b4b7-5e624b46de51" name="InitSensor" visibility="Protected" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="6931aa5d-3a41-4905-bc8a-7693a09329e6" />
+          </operation>
+          <operation Id="4d8b6cbb-d14e-48d8-8993-2f85a8372f49" name="GetValue" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="0c10b4c7-e16e-43fd-8ad9-4453b5cf7120" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="9f7ad26b-0d3f-4672-88eb-ab5f2ccdeca9" direction="Return" isUnique="false">
+                  <elementDefinition Id="07206959-7e2c-4c84-9e12-3479ed33fc15" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="09c4299c-31d8-473b-b250-62b537ffa128" LastKnownName="TSensorVal" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+          <operation Id="23541849-0e07-46c0-8b06-f20dedf44a56" name="PollingSensor" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <appliedStereotypesInternal>
+              <stereotypeInstance Id="68c4c8e5-a0a3-41c9-ba5c-fadc272f9857" name="create" profile="StandardProfileL2">
+                <elementDefinition Id="c5e8399d-2c23-4be5-aa10-234197b8c83b" />
+              </stereotypeInstance>
+            </appliedStereotypesInternal>
+            <elementDefinition Id="a9047e04-b519-4d62-9bf1-4c898ec0630a" />
+            <ownedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="66389dde-f798-4c46-a677-c813a04dbc21" name="nxtBrick" direction="In" isUnique="false">
+                  <elementDefinition Id="1fc7e867-5eb4-4e1c-8cca-0069773a47cc" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="b266184a-9d9a-40f8-a322-51a2aabb9a6d" LastKnownName="NXTBrick" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+              <operationHasOwnedParameters>
+                <parameter Id="2490ebc7-24a0-40dd-874a-08b9d78bfff7" name="sensor" direction="In" isUnique="false">
+                  <elementDefinition Id="4ec094b5-f763-4a93-a122-091a01094b52" />
+                  <type_NamedElement>
+                    <referencedTypeMoniker Id="36ddc865-d86e-44fb-8bf6-650cae17946c" LastKnownName="NXTBrick.Sensor" />
+                  </type_NamedElement>
+                </parameter>
+              </operationHasOwnedParameters>
+            </ownedParameters>
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4cade896-a65a-4dd9-951b-eb2e5a6b86b9" name="LightSensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="5e015067-f6c8-4c23-9baf-d4683300ecc9" />
+        <signatures>
+          <templateBinding Id="2dd22870-0d88-4992-9cfe-c3e92fc7f6dd">
+            <templateSignatureProxyMoniker Id="66cfbbec-a0a7-420c-afd7-a152c909ab7e" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution Id="c9a25cb3-eb66-490b-827e-fdae32dabd23">
+                  <elementDefinition Id="4222d784-a544-44a1-b467-d60923473270" />
+                  <actuals>
+                    <referencedTypeMoniker Id="b70c81e5-afcb-473c-8de0-d3baf3aba91d" LastKnownName="Int" />
+                  </actuals>
+                  <formal>
+                    <templateParameterProxyMoniker Id="4f1a887d-8ab3-46ea-9310-322ff7659d46" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="6cef474c-0b03-45b1-9b52-0b3ca9da0eef" />
+          </templateBinding>
+        </signatures>
+        <generalsInternal>
+          <generalization Id="ab36a58e-2225-48f5-ac97-1bc36eecb993" isSubstitutable="false">
+            <classMoniker Id="1416156d-af9c-46dd-b308-c5b1471ef329" LastKnownName="PollingSensor" />
+            <elementDefinition Id="7e2bd147-31f9-4c2d-bada-ad69652f527f" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="739884e1-305d-4fb0-acb8-aeca6d009d69" name="SoundSensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="34a2e82e-b5f9-4bb0-9b95-d1ad9caaec5e" />
+        <signatures>
+          <templateBinding Id="513c89f4-c363-4cc3-9c38-b59cdcd2a132">
+            <templateSignatureProxyMoniker Id="b69b7de5-e434-40ae-9a4d-0c5ef3f2eddd" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution Id="a506e4f2-0747-4c85-aeb9-e5b1183e8c68">
+                  <elementDefinition Id="8a659d66-2a9b-4c39-9475-22ceaf7e36ee" />
+                  <actuals>
+                    <referencedTypeMoniker Id="6b89aad3-848c-47d8-90f3-8f5b5006f094" LastKnownName="Float" />
+                  </actuals>
+                  <formal>
+                    <templateParameterProxyMoniker Id="6a81149c-952d-429b-9559-fb5ae18dacff" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="48e2b590-2b28-4e17-ba74-d5e50be588ce" />
+          </templateBinding>
+        </signatures>
+        <generalsInternal>
+          <generalization Id="32f4c040-9169-472e-b07d-4e3f5e44bdaf" isSubstitutable="false">
+            <classMoniker Id="1416156d-af9c-46dd-b308-c5b1471ef329" LastKnownName="PollingSensor" />
+            <elementDefinition Id="c27ad817-915a-4025-8b93-c0b82f8857fb" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="dae135c5-275e-4310-ad6e-077c26a6c363" name="SoundAndDbaSensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="db781477-c3ff-4f42-abf7-b2f725179f8b" />
+        <signatures>
+          <templateBinding Id="84a7aecb-7934-4dbe-a0bc-1a18e7324ce0">
+            <templateSignatureProxyMoniker Id="1ca610ae-2ecf-4b61-a561-d261bf0f4c92" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution Id="d5d5ccbd-426b-4ae1-83ba-12cc93b85696">
+                  <elementDefinition Id="3dd5f338-5996-4ff2-8c63-a7d95d281121" />
+                  <actuals>
+                    <referencedTypeMoniker Id="5f24df27-2a3f-423f-acb8-41f0ea9a3532" LastKnownName="Float" />
+                  </actuals>
+                  <formal>
+                    <templateParameterProxyMoniker Id="a1727afd-d399-48f4-ac81-b6f07fc8c874" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="7dc82f4e-ac71-41bb-be4e-61359a631b7b" />
+          </templateBinding>
+        </signatures>
+        <generalsInternal>
+          <generalization Id="c3517e4a-c682-4801-9978-5c9738b8111f" isSubstitutable="false">
+            <classMoniker Id="1416156d-af9c-46dd-b308-c5b1471ef329" LastKnownName="PollingSensor" />
+            <elementDefinition Id="a8c6549b-fb89-4876-ab6f-d0a6a395a29d" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b33fcf44-6297-4691-8428-16660a4247a0" name="IPollingSensor" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Nck.NxtControlLib::Input::IPollingSensor">
+        <elementDefinition Id="85b257c3-27ac-4ce5-8879-b51d62369c38" />
+        <ownedProperties>
+          <property Id="928ecf81-a9a8-420f-9279-89c257eaf86f" name="OnChange" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="6874da16-fb69-4160-b8e0-8d0e9a2afaaa" />
+          </property>
+        </ownedProperties>
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="cbd873cd-82da-40a7-8bde-df945f8a13dc" name="TouchSensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cfb36886-c418-489d-9afd-f1f659cd9d97" />
+        <signatures>
+          <templateBinding Id="929e64af-78ae-4b56-a795-6977e6022a96">
+            <templateSignatureProxyMoniker Id="28329e37-e543-43dd-a647-76ba32fe8fdb" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution Id="dab70204-a473-4978-b0dd-9abbf7a6b0e0">
+                  <elementDefinition Id="b6ee5bb6-633f-4dc6-971b-c326bc112f32" />
+                  <actuals>
+                    <referencedTypeMoniker Id="503031c0-2fb9-4c51-9a10-977cb6e18c33" LastKnownName="Bool" />
+                  </actuals>
+                  <formal>
+                    <templateParameterProxyMoniker Id="0df5287e-5cb6-46f5-8a39-d56e157b9ff1" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="f94255d5-c7f3-4c7a-a0b0-0c800c9d9021" />
+          </templateBinding>
+        </signatures>
+        <generalsInternal>
+          <generalization Id="cca39f00-8fa9-4f86-86b4-ca0f09befd66" isSubstitutable="false">
+            <classMoniker Id="1416156d-af9c-46dd-b308-c5b1471ef329" LastKnownName="PollingSensor" />
+            <elementDefinition Id="5c073f4a-a90c-4755-933c-f8864fd5f369" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="b70c81e5-afcb-473c-8de0-d3baf3aba91d" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Int">
+        <elementDefinition Id="85903202-0dff-4ca1-8ad1-26ddfe51bd37" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="6b89aad3-848c-47d8-90f3-8f5b5006f094" name="Float" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Float">
+        <elementDefinition Id="441e706d-a213-4ffb-8d4a-df181217b697" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="5f24df27-2a3f-423f-acb8-41f0ea9a3532" name="Float" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Float">
+        <elementDefinition Id="441e706d-a213-4ffb-8d4a-df181217b697" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="503031c0-2fb9-4c51-9a10-977cb6e18c33" name="Bool" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Bool">
+        <elementDefinition Id="7fdfac77-7560-478e-b0fe-4cc6a04a4475" />
+      </referencedType>
+    </packageHasNamedElement>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="4ffa3b1b-7d0b-4e9a-9991-52b5b5c103bc" name="UltrasonicSensor" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="02040ed5-9747-44f6-992e-88c81e554179" />
+        <signatures>
+          <templateBinding Id="e2318d63-d741-4474-987d-d15c5adcf594">
+            <templateSignatureProxyMoniker Id="4b75e773-b700-4783-a8d5-68c8943ee875" />
+            <relationshipOwnedElementsInternal>
+              <templateBindingHasTemplateParameterSubstitution>
+                <templateParameterSubstitution Id="0502f240-9fbf-4573-87da-2343c847e153">
+                  <elementDefinition Id="e7b306cb-2a57-48f2-826d-87e71b0b4622" />
+                  <actuals>
+                    <referencedTypeMoniker Id="dc571488-42b3-4cf7-87e5-6b61b74d97fb" LastKnownName="Int" />
+                  </actuals>
+                  <formal>
+                    <templateParameterProxyMoniker Id="49400235-e99f-428c-a527-b621369516c3" />
+                  </formal>
+                </templateParameterSubstitution>
+              </templateBindingHasTemplateParameterSubstitution>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="42040a7e-59c6-4c8d-821e-e6103f0a108e" />
+          </templateBinding>
+        </signatures>
+        <generalsInternal>
+          <generalization Id="85c47952-c5a7-4533-9a99-ddce1fd9723b" isSubstitutable="false">
+            <classMoniker Id="1416156d-af9c-46dd-b308-c5b1471ef329" LastKnownName="PollingSensor" />
+            <elementDefinition Id="82b57c9c-7a45-4c6a-aceb-f51b5d75c7a4" />
+          </generalization>
+        </generalsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <packageHasNamedElement>
+      <referencedType Id="dc571488-42b3-4cf7-87e5-6b61b74d97fb" name="Int" isAbstract="false" isLeaf="false" cachedFullName="Modeling::Int">
+        <elementDefinition Id="85903202-0dff-4ca1-8ad1-26ddfe51bd37" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="09c4299c-31d8-473b-b250-62b537ffa128" name="TSensorVal" isAbstract="false" isLeaf="false" cachedFullName="TSensorVal">
+        <elementDefinition Id="f1b575c5-a006-433c-a3a8-cc18650cad84" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="b266184a-9d9a-40f8-a322-51a2aabb9a6d" name="NXTBrick" isAbstract="false" isLeaf="false" cachedFullName="NXTBrick">
+        <elementDefinition Id="57f1b490-141f-4a25-814a-2c1549f10eca" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="36ddc865-d86e-44fb-8bf6-650cae17946c" name="NXTBrick.Sensor" isAbstract="false" isLeaf="false" cachedFullName="NXTBrick.Sensor">
+        <elementDefinition Id="5d4c97e8-e789-47e9-9fbe-399db8edfbdc" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="28d8f794-840f-4904-9215-db6bbb724628" name="event&lt;TSensorVal&gt;" isAbstract="false" isLeaf="false" cachedFullName="event&lt;TSensorVal&gt;">
+        <elementDefinition Id="143f4bab-8966-4964-a8dc-35cc0e24eede" />
+      </referencedType>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <referencedType Id="e15d02d0-c29f-4b9f-8e3b-7e60e79838f8" name="Task" isAbstract="false" isLeaf="false" cachedFullName="Task">
+        <elementDefinition Id="ed1108a4-66f5-4075-bf7d-866e043ee68f" />
+      </referencedType>
+    </packageHasNamedElement>
+  </packagedElements>
+  <templateSignatureProxies>
+    <templateSignatureProxy Id="66cfbbec-a0a7-420c-afd7-a152c909ab7e" parameters="" isLeaf="false" signatureId="37f81373-29b4-42ca-b0ed-0ea7cc1e5335">
+      <elementDefinition Id="37f81373-29b4-42ca-b0ed-0ea7cc1e5335" />
+      <ownedParameters>
+        <templateParameterProxy Id="4f1a887d-8ab3-46ea-9310-322ff7659d46" parameterId="35430adc-4c89-46a3-a2d3-68e9d0c2b835">
+          <elementDefinition Id="35430adc-4c89-46a3-a2d3-68e9d0c2b835" />
+        </templateParameterProxy>
+      </ownedParameters>
+    </templateSignatureProxy>
+    <templateSignatureProxy Id="b69b7de5-e434-40ae-9a4d-0c5ef3f2eddd" parameters="" isLeaf="false" signatureId="37f81373-29b4-42ca-b0ed-0ea7cc1e5335">
+      <elementDefinition Id="37f81373-29b4-42ca-b0ed-0ea7cc1e5335" />
+      <ownedParameters>
+        <templateParameterProxy Id="6a81149c-952d-429b-9559-fb5ae18dacff" parameterId="35430adc-4c89-46a3-a2d3-68e9d0c2b835">
+          <elementDefinition Id="35430adc-4c89-46a3-a2d3-68e9d0c2b835" />
+        </templateParameterProxy>
+      </ownedParameters>
+    </templateSignatureProxy>
+    <templateSignatureProxy Id="1ca610ae-2ecf-4b61-a561-d261bf0f4c92" parameters="" isLeaf="false" signatureId="37f81373-29b4-42ca-b0ed-0ea7cc1e5335">
+      <elementDefinition Id="37f81373-29b4-42ca-b0ed-0ea7cc1e5335" />
+      <ownedParameters>
+        <templateParameterProxy Id="a1727afd-d399-48f4-ac81-b6f07fc8c874" parameterId="35430adc-4c89-46a3-a2d3-68e9d0c2b835">
+          <elementDefinition Id="35430adc-4c89-46a3-a2d3-68e9d0c2b835" />
+        </templateParameterProxy>
+      </ownedParameters>
+    </templateSignatureProxy>
+    <templateSignatureProxy Id="28329e37-e543-43dd-a647-76ba32fe8fdb" parameters="" isLeaf="false" signatureId="37f81373-29b4-42ca-b0ed-0ea7cc1e5335">
+      <elementDefinition Id="37f81373-29b4-42ca-b0ed-0ea7cc1e5335" />
+      <ownedParameters>
+        <templateParameterProxy Id="0df5287e-5cb6-46f5-8a39-d56e157b9ff1" parameterId="35430adc-4c89-46a3-a2d3-68e9d0c2b835">
+          <elementDefinition Id="35430adc-4c89-46a3-a2d3-68e9d0c2b835" />
+        </templateParameterProxy>
+      </ownedParameters>
+    </templateSignatureProxy>
+    <templateSignatureProxy Id="4b75e773-b700-4783-a8d5-68c8943ee875" parameters="" isLeaf="false" signatureId="37f81373-29b4-42ca-b0ed-0ea7cc1e5335">
+      <elementDefinition Id="37f81373-29b4-42ca-b0ed-0ea7cc1e5335" />
+      <ownedParameters>
+        <templateParameterProxy Id="49400235-e99f-428c-a527-b621369516c3" parameterId="35430adc-4c89-46a3-a2d3-68e9d0c2b835">
+          <elementDefinition Id="35430adc-4c89-46a3-a2d3-68e9d0c2b835" />
+        </templateParameterProxy>
+      </ownedParameters>
+    </templateSignatureProxy>
+  </templateSignatureProxies>
+  <package Id="444f0a20-3401-4cd9-99bd-c37c1bf60430" name="Modeling">
+    <elementDefinition Id="11739947-b271-4fe9-aae6-6afc54685cde" />
+    <profileInstances>
+      <packageHasProfileInstances Id="2a200240-2c10-4ebe-8dc9-a0b14c001868">
+        <profileInstance Id="1a5f464e-3122-454c-94e0-7d010cfcda2c" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="b508e65e-d084-48f4-b051-dd53da704169">
+        <profileInstance Id="9f8e9b8d-194e-4df4-b58e-0563729d8984" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="64908fd0-c414-4feb-aec4-8e58f2938c34">
+        <profileInstance Id="21812d93-8429-4a4d-8f08-7dc378ce6b50" name="CSharpProfile">
+          <elementDefinition Id="599b1794-b174-4886-944b-da8b85a0c434" />
+        </profileInstance>
+        <elementDefinition Id="c4b746ad-5da9-42f7-a7fc-02d538cd7d9d" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</logicalClassDesignerModel>
