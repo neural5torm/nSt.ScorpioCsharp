@@ -6,7 +6,7 @@ using System.Text;
 using AForge.Robotics.Lego;
 
 
-namespace nSt.NxtControlLib.Façades
+namespace nSt.NxtControlLib
 {
     // TODOlater: implement REAL façade (remove base class dependency)
     public class AForgeNxtBrickFacade : NXTBrick, INxtBrick

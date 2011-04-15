@@ -1,9 +1,10 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using nSt.NxtControlLib.Façades;
 using System.Diagnostics;
 using System;
+
+using nSt.NxtControlLib;
 
 namespace UnitTests.Stubs
 {
@@ -125,7 +126,7 @@ namespace UnitTests.Stubs
             if (IsConnected)
             {
                 Random rand = new Random();
-                value = rand.Next(1024) - 512;
+                value = rand.Next(256);
                 return true;
             }
             print("Problem: could not retrieve data because of broken connection");

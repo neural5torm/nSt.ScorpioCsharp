@@ -8,7 +8,6 @@ using System.Text;
 using nSt.NxtControlLib.Input;
 using nSt.NxtControlLib.Output;
 using nSt.NxtControlLib.Behaviors;
-using nSt.NxtControlLib.Façades;
 
 namespace nSt.NxtControlLib
 {

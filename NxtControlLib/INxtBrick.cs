@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using AForge.Robotics.Lego;
 
-namespace nSt.NxtControlLib.Façades
+namespace nSt.NxtControlLib
 {   
     public interface INxtBrick
     {

@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading;
 using System.Diagnostics;
+
 using AForge.Robotics.Lego;
-using nSt.NxtControlLib.Façades;
 
 namespace nSt.NxtControlLib.Input
 {
@@ -31,22 +31,9 @@ namespace nSt.NxtControlLib.Input
             //Thread.Sleep(300);
         }
 
-        public override int GetValue()
+        public override bool GetValue(out int value)
         {
-            int value;
-            bool ok;
-
-#if DEBUG
-            DateTime t0 = DateTime.Now;
-#endif
-            ok = Brick.GetUltrasonicSensorsValue(Sensor, out value);
-#if DEBUG
-            //Debug.WriteLine(t0.TimeOfDay + ": time to sense distance: " + (DateTime.Now - t0));
-#endif            
-
-            if (!ok)
-                return MinSensorVal;
-            return value;
+            return Brick.GetUltrasonicSensorsValue(Sensor, out value);
         }
 
         protected override bool ValueChanged(int previousVal, int newVal)

@@ -6,7 +6,6 @@ using System.Threading.Tasks;
 using System.Threading;
 using nSt.NxtControlLib.Output;
 using AForge.Robotics.Lego;
-using nSt.NxtControlLib.Façades;
 
 namespace nSt.NxtControlLib.Behaviors
 {

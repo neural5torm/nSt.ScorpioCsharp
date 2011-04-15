@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using nSt.NxtControlLib.Input;
-using nSt.NxtControlLib.Façades;
+using nSt.NxtControlLib;
 
 namespace UnitTests.Stubs
 {
@@ -30,16 +30,9 @@ namespace UnitTests.Stubs
             
         }
 
-        public override int GetValue()
+        public override bool GetValue(out int value)
         {
-            int value;
-            bool ok;
-
-            ok = Brick.GetUltrasonicSensorsValue(Sensor, out value);         
-
-            if (!ok)
-                return MinSensorVal;
-            return value;
+            return Brick.GetUltrasonicSensorsValue(Sensor, out value);         
         }
 
         protected override bool ValueChanged(int previousVal, int newVal)

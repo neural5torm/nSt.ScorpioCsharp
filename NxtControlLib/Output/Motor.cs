@@ -5,7 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Diagnostics;
 
-using nSt.NxtControlLib.Façades;
 
 namespace nSt.NxtControlLib.Output
 {    

@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 
-using nSt.NxtControlLib.Façades;
 
 namespace nSt.NxtControlLib.Input
 {
@@ -25,18 +24,20 @@ namespace nSt.NxtControlLib.Input
         public override void InitSensor()
         { }
 
-        public override double GetValue()
+        public override bool GetValue(out double value)
         {
-            // sensor sensibilities found at http://www.convict.lu/htm/rob/NXT_sound_sensor.htm
-#if DEBUG
-            DateTime t0 = DateTime.Now;
-#endif
-            double value = 3.0 * Math.Sqrt(Math.Max(GetDbaValue() - 0.1, 0.0));
-            value += Math.Sqrt(Math.Max(GetDbValue() - 0.1, 0.0));
-#if DEBUG
-            //Debug.WriteLine(t0.TimeOfDay + ": time to sense DBA sound level: " + (DateTime.Now - t0));
-#endif            
-            return value / 4.0;
+            // Sensor sensibilities found at http://www.convict.lu/htm/rob/NXT_sound_sensor.htm
+
+            double dba, db;
+
+            var ok1 = GetDbaValue(out dba);
+            var ok2 = GetDbValue(out db);
+
+            var dbaRatio = 3.0 * Math.Sqrt(Math.Max(dba - 0.1, 0.0));
+            dbaRatio += Math.Sqrt(Math.Max(db - 0.1, 0.0));
+            value = dbaRatio / 4.0;
+
+            return ok1 && ok2;
         }
 
         protected override bool ValueChanged(double previousVal, double newVal)
@@ -50,7 +51,7 @@ namespace nSt.NxtControlLib.Input
 
 
 
-        private double GetDbaValue()
+        private bool GetDbaValue(out double value)
         {
             NxtBrick.SensorValues sensorValues;
             bool ok;        
@@ -65,12 +66,11 @@ namespace nSt.NxtControlLib.Input
                 ok = Brick.GetSensorValue(Sensor, out sensorValues);
             }
 
-            if (!ok)
-                return MinSensorVal;
-            return (double)sensorValues.Normalized / MAX_NORMALIZED;            
+            value = (double)sensorValues.Normalized / MAX_NORMALIZED;
+            return ok;
         }
 
-        private double GetDbValue()
+        private bool GetDbValue(out double value)
         {
             NxtBrick.SensorValues sensorValues;
             bool ok;
@@ -85,9 +85,8 @@ namespace nSt.NxtControlLib.Input
                 ok = Brick.GetSensorValue(Sensor, out sensorValues);
             }
 
-            if (!ok)
-                return MinSensorVal;
-            return (double)sensorValues.Normalized / MAX_NORMALIZED;
+            value = (double)sensorValues.Normalized / MAX_NORMALIZED;
+            return ok;
         }
     }
 }

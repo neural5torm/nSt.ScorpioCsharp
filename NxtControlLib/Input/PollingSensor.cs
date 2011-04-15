@@ -8,7 +8,6 @@ using System.Diagnostics;
 using System.Threading;
 using System.ComponentModel;
 using nSt.NxtControlLib.Exceptions;
-using nSt.NxtControlLib.Façades;
 
 namespace nSt.NxtControlLib.Input
 {
@@ -44,8 +43,8 @@ namespace nSt.NxtControlLib.Input
         public abstract TSensorVal MaxSensorVal { get; }
         public abstract TSensorVal MinSensorVal { get; }
 
-        public delegate void SensorEvent(object sender, SensorEventArgs<TSensorVal> e);
-        public event SensorEvent OnChange;
+        public delegate void SensorEventHandler(object sender, SensorEventArgs<TSensorVal> e);
+        public event SensorEventHandler OnChange;
 
 
 
@@ -61,8 +60,7 @@ namespace nSt.NxtControlLib.Input
         public abstract void InitSensor();
 
 
-
-        public abstract TSensorVal GetValue();
+        public abstract bool GetValue(out TSensorVal value);
 
 
         /// <summary>
@@ -87,7 +85,9 @@ namespace nSt.NxtControlLib.Input
                                {
                                    for (; ; )
                                    {
-                                       sensorValues.Add(GetValue());
+                                       TSensorVal value;
+                                       if (GetValue(out value))
+                                           sensorValues.Add(value);
 
                                        Thread.Sleep(TimeRes);
                                        cancellation.Token.ThrowIfCancellationRequested();
@@ -149,9 +149,8 @@ namespace nSt.NxtControlLib.Input
                                    {
                                        DateTime preDate = DateTime.Now;
 
-                                       sensorVal = GetValue();
-                                       //Debug.WriteLine(Name + " sensed " + sensorVal);
-                                       if (ValueChanged(previousVal, sensorVal))
+                                       var ok = GetValue(out sensorVal);                                       
+                                       if (ok && ValueChanged(previousVal, sensorVal))
                                        {
                                            RaiseEventOnMainThread(OnChange, this, new SensorEventArgs<TSensorVal>(sensorVal));
                                            previousVal = sensorVal;
@@ -221,7 +220,7 @@ namespace nSt.NxtControlLib.Input
         {
             StopSensing();
             foreach (var d in OnChange.GetInvocationList())
-                OnChange -= d as SensorEvent;
+                OnChange -= d as SensorEventHandler;
         }
 
         public override string ToString()

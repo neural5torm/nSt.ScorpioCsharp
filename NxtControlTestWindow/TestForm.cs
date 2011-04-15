@@ -44,14 +44,14 @@ namespace NxtControlTestWindow
             // light
             lightProgressBar.Minimum = scorpio.LightIntensitySensor.MinSensorVal;
             lightProgressBar.Maximum = scorpio.LightIntensitySensor.MaxSensorVal;
-            scorpio.LightIntensitySensor.OnChange += new PollingSensor<ushort>.SensorEvent(LightSensor_OnChange);
+            scorpio.LightIntensitySensor.OnChange += new PollingSensor<ushort>.SensorEventHandler(LightSensor_OnChange);
             scorpio.LightIntensitySensor.StartSensing();
             // sound level
             soundLevelProgressBar.Minimum = scorpio.SoundLevelSensor.MinSensorVal;
             soundLevelProgressBar.Maximum = scorpio.SoundLevelSensor.MaxSensorVal;
             if (soundLevelProgressBar.Enabled)
             {
-                scorpio.SoundLevelSensor.OnChange += new PollingSensor<ushort>.SensorEvent(SoundLevelSensor_OnChange);
+                scorpio.SoundLevelSensor.OnChange += new PollingSensor<ushort>.SensorEventHandler(SoundLevelSensor_OnChange);
                 scorpio.SoundLevelSensor.StartSensing();
             }
             // sound ratio
@@ -59,17 +59,17 @@ namespace NxtControlTestWindow
             soundRatioProgressBar.Maximum = (int)(scorpio.SoundRatioSensor.MaxSensorVal * 100.0);
             if (soundRatioProgressBar.Enabled)
             {
-                scorpio.SoundRatioSensor.OnChange += new PollingSensor<double>.SensorEvent(SoundRatioSensor_OnChange);
+                scorpio.SoundRatioSensor.OnChange += new PollingSensor<double>.SensorEventHandler(SoundRatioSensor_OnChange);
                 scorpio.SoundRatioSensor.StartSensing();
             }
             // ultrasonic distance
             ultrasonicProgressBar.Minimum = scorpio.UltrasonicSensor.MinSensorVal;
             ultrasonicProgressBar.Maximum = scorpio.UltrasonicSensor.MaxSensorVal;
-            scorpio.UltrasonicSensor.OnChange += new PollingSensor<int>.SensorEvent(UltrasonicSensor_OnChange);
+            scorpio.UltrasonicSensor.OnChange += new PollingSensor<int>.SensorEventHandler(UltrasonicSensor_OnChange);
             scorpio.UltrasonicSensor.StartSensing();
             // touch
             touchCheckBox.Checked = scorpio.TouchSensor.MinSensorVal;
-            scorpio.TouchSensor.OnChange += new PollingSensor<bool>.SensorEvent(TouchSensor_OnChange);
+            scorpio.TouchSensor.OnChange += new PollingSensor<bool>.SensorEventHandler(TouchSensor_OnChange);
             scorpio.TouchSensor.StartSensing();
             // Motors:
         }

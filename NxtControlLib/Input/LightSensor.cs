@@ -4,7 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Diagnostics;
 
-using nSt.NxtControlLib.Façades;
 
 namespace nSt.NxtControlLib.Input
 {
@@ -26,22 +25,14 @@ namespace nSt.NxtControlLib.Input
                 NxtBrick.SensorMode.Raw);
         }
 
-        public override ushort GetValue()
+        public override bool GetValue(out ushort value)
         {
             NxtBrick.SensorValues values;
-            bool ok;
+            
+            var ok = Brick.GetSensorValue(Sensor, out values);                       
 
-#if DEBUG
-            DateTime t0 = DateTime.Now;
-#endif
-            ok = Brick.GetSensorValue(Sensor, out values);                       
-#if DEBUG
-            //Debug.WriteLine(t0.TimeOfDay + ": time to sense light level: " + (DateTime.Now - t0));
-#endif
-
-            if (!ok)
-                return MinSensorVal;
-            return values.Normalized;                            
+            value = values.Normalized;
+            return ok;         
         }
 
         protected override bool ValueChanged(ushort previousVal, ushort newVal)

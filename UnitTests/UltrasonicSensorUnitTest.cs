@@ -2,11 +2,13 @@
 using System.Text;
 using System.Collections.Generic;
 using System.Linq;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-
-using UnitTests.Stubs;
-using nSt.NxtControlLib.Façades;
 using System.Threading.Tasks;
+using System.Threading;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using UnitTests.Stubs;
+
+using nSt.NxtControlLib;
+
 
 namespace UnitTests
 {
@@ -35,22 +37,37 @@ namespace UnitTests
         public void StubSensorReturnsValuesBetween0And255()
         {
             // Arrange
-            StubUltrasonicSensor stubSensor = new StubUltrasonicSensor(Brick, NxtBrick.Sensor.First);
-            List<int> values = new List<int>();
-            brick.ConnectionFckedUp = true;
+            var stubSensor = new StubUltrasonicSensor(Brick, NxtBrick.Sensor.First);
             stubSensor.InitSensor();
 
             // Act 
-            Task.Factory.StartNew(() =>
-            {
-                // TODOnow install on GitHub
-                // TODOnow startsensing
-            });
+            // start sensing
+            stubSensor.StartGettingValues();
+            Thread.Sleep(1000);
+            var values = stubSensor.StopGettingValues();
 
             // Assert
             Assert.AreNotEqual(0, values.Count);
-            Assert.IsTrue(values.All((value) => value >= 0 && value <= 255));
+            Assert.IsTrue(values.All((value) => value >= stubSensor.MinSensorVal && value <= stubSensor.MaxSensorVal));
 
+        }
+
+        [TestMethod]
+        public void StubSensorReturnsNothingWhenDisconnected()
+        {
+            // Arrange
+            var stubSensor = new StubUltrasonicSensor(Brick, NxtBrick.Sensor.First);
+            Brick.ConnectionFckedUp = true;
+            stubSensor.InitSensor();
+
+            // Act 
+            // start sensing
+            stubSensor.StartGettingValues();
+            Thread.Sleep(1000);
+            var values = stubSensor.StopGettingValues();
+
+            // Assert
+            Assert.AreEqual(0, values.Count);
         }
     }
 }

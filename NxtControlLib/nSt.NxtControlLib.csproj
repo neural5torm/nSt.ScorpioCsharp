@@ -53,9 +53,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Exceptions\NxtControlException.cs" />
-    <Compile Include="Facades\AForgeNxtBrickFacade.cs" />
-    <Compile Include="Facades\INxtBrick.cs" />
-    <Compile Include="Facades\NxtBrick.cs" />
+    <Compile Include="AForgeNxtBrickFacade.cs" />
+    <Compile Include="INxtBrick.cs" />
+    <Compile Include="NxtBrick.cs" />
     <Compile Include="Input\LightSensor.cs" />
     <Compile Include="Input\MotorSensor.cs" />
     <Compile Include="Input\NxtStatusSensor.cs" />

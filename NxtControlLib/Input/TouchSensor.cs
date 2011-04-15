@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Diagnostics;
-using nSt.NxtControlLib.Façades;
 
 namespace nSt.NxtControlLib.Input
 {
@@ -26,22 +25,14 @@ namespace nSt.NxtControlLib.Input
                 NxtBrick.SensorMode.Boolean);
         }
 
-        public override bool GetValue()
+        public override bool GetValue(out bool value)
         {
             NxtBrick.SensorValues values;
-            bool ok;
+            
+            var ok = Brick.GetSensorValue(Sensor, out values);            
 
-#if DEBUG
-            DateTime t0 = DateTime.Now;
-#endif
-            ok = Brick.GetSensorValue(Sensor, out values);            
-#if DEBUG
-            //Debug.WriteLine(t0.TimeOfDay + ": time to sense touch: " + (DateTime.Now - t0));
-#endif
-
-            if (!ok)
-                return MinSensorVal;
-            return values.Scaled == 1;
+            value = (values.Scaled == 1);
+            return ok;
         }
 
         protected override bool ValueChanged(bool previousVal, bool newVal)
