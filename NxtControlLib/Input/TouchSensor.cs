@@ -8,8 +8,8 @@ namespace nSt.NxtControlLib.Input
 {
     public class TouchSensor : PollingSensor<bool>
     {
-        public override bool MaxSensorVal { get { return true; } }
-        public override bool MinSensorVal { get { return false; } }
+        public override bool MaxSensorValue { get { return true; } }
+        public override bool MinSensorValue { get { return false; } }
 
 
         public TouchSensor(INxtBrick nxtBrick, NxtBrick.Sensor sensor)

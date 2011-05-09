@@ -9,8 +9,8 @@ namespace nSt.NxtControlLib.Input
 {
     public class SoundSensor : PollingSensor<ushort>
     {
-        public override ushort MaxSensorVal { get { return 1023; } }
-        public override ushort MinSensorVal { get { return 0; } }
+        public override ushort MaxSensorValue { get { return 1023; } }
+        public override ushort MinSensorValue { get { return 0; } }
 
 
         public SoundSensor(INxtBrick nxtBrick, NxtBrick.Sensor sensor)
@@ -38,11 +38,11 @@ namespace nSt.NxtControlLib.Input
 
         protected override bool ValueChanged(ushort previousVal, ushort newVal)
         {
-            if (ValResPercent < 1)
+            if (ValueResolutionPercentage < 1)
                 return newVal != previousVal;
 
-            return (newVal > (previousVal * (100 + ValResPercent)) / 100
-                    || newVal < (previousVal * (100 - ValResPercent)) / 100);                
+            return (newVal > (previousVal * (100 + ValueResolutionPercentage)) / 100
+                    || newVal < (previousVal * (100 - ValueResolutionPercentage)) / 100);                
         }
     }
 }

@@ -74,7 +74,7 @@
     <Compile Include="Behaviors\IWalkBehavior.cs" />
     <Compile Include="Output\Motor.cs" />
     <Compile Include="Behaviors\TwoMotorWalkBehavior.cs" />
-    <Compile Include="Scorpio1BtControl.cs" />
+    <Compile Include="Scorpio.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup />

@@ -9,14 +9,14 @@ namespace UnitTests.Stubs
 {
     internal class StubUltrasonicSensor : PollingSensor<int>
     {
-        public override int MaxSensorVal { get { return 255; } }
-        public override int MinSensorVal { get { return 0; } }
+        public override int MaxSensorValue { get { return 255; } }
+        public override int MinSensorValue { get { return 0; } }
 
 
         public StubUltrasonicSensor(StubNxtBrick brick, NxtBrick.Sensor sensor)
             : base(brick, sensor)
         {
-            ValResPercent = 1;
+            ValueResolutionPercentage = 1;
         }
 
 
@@ -37,11 +37,11 @@ namespace UnitTests.Stubs
 
         protected override bool ValueChanged(int previousVal, int newVal)
         {
-            if (ValResPercent < 1)
+            if (ValueResolutionPercentage < 1)
                 return newVal != previousVal;
 
-            return (newVal > (previousVal * (100 + ValResPercent)) / 100
-                    || newVal < (previousVal * (100 - ValResPercent)) / 100);               
+            return (newVal > (previousVal * (100 + ValueResolutionPercentage)) / 100
+                    || newVal < (previousVal * (100 - ValueResolutionPercentage)) / 100);               
         }
     }
 }

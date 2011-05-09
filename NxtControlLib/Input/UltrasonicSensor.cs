@@ -11,14 +11,14 @@ namespace nSt.NxtControlLib.Input
 {
     public class UltrasonicSensor : PollingSensor<int>
     {
-        public override int MaxSensorVal { get { return 255; } }
-        public override int MinSensorVal { get { return 0; } }
+        public override int MaxSensorValue { get { return 255; } }
+        public override int MinSensorValue { get { return 0; } }
 
 
         public UltrasonicSensor(INxtBrick nxtBrick, NxtBrick.Sensor sensor)
             : base(nxtBrick, sensor)
         {
-            ValResPercent = 1;
+            ValueResolutionPercentage = 1;
         }
 
 
@@ -38,11 +38,11 @@ namespace nSt.NxtControlLib.Input
 
         protected override bool ValueChanged(int previousVal, int newVal)
         {
-            if (ValResPercent < 1)
+            if (ValueResolutionPercentage < 1)
                 return newVal != previousVal;
 
-            return (newVal > (previousVal * (100 + ValResPercent)) / 100
-                    || newVal < (previousVal * (100 - ValResPercent)) / 100);               
+            return (newVal < (previousVal * (100 - ValueResolutionPercentage)) / 100.0 
+                    || newVal > (previousVal * (100 + ValueResolutionPercentage)) / 100.0);               
         }
     }
 }

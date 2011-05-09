@@ -9,6 +9,7 @@ namespace UnitTests
     [TestClass]
     public class TwoMotorWalkUnitTest
     {
+        // TODOnow debug(+test?) slow reaction times when motor speed/direction changes
         [TestMethod]
         public void ShouldStartWalkingAndKnowItIsWalking()
         {
@@ -21,6 +22,26 @@ namespace UnitTests
 
         [TestMethod]
         public void ShouldWalkForALimitedTimeWhileDoingOtherStuff()
+        {
+            //
+
+            //
+
+            //
+        }
+
+        [TestMethod]
+        public void ShouldWalkAt70PowerAndKnowItIsWalkingThatFast()
+        {
+            //
+    
+            //
+
+            //
+        }
+
+        [TestMethod]
+        public void ShouldWalkAtMinus70PowerAndKnowItIsWalkingThatFast()
         {
             //
 

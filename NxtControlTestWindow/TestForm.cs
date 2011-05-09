@@ -17,7 +17,7 @@ namespace NxtControlTestWindow
     // TOOD use keyboard input to learn complex behaviors (create a KeyEnvLearningBehavior class?)
     public partial class TestForm : Form
     {
-        Scorpio1 scorpio = new Scorpio1();
+        Scorpio scorpio = new Scorpio();
 
         int previousUltrasonicValue = 255;
 
@@ -42,33 +42,33 @@ namespace NxtControlTestWindow
         {
             // Sensors:
             // light
-            lightProgressBar.Minimum = scorpio.LightIntensitySensor.MinSensorVal;
-            lightProgressBar.Maximum = scorpio.LightIntensitySensor.MaxSensorVal;
+            lightProgressBar.Minimum = scorpio.LightIntensitySensor.MinSensorValue;
+            lightProgressBar.Maximum = scorpio.LightIntensitySensor.MaxSensorValue;
             scorpio.LightIntensitySensor.OnChange += new PollingSensor<ushort>.SensorEventHandler(LightSensor_OnChange);
             scorpio.LightIntensitySensor.StartSensing();
             // sound level
-            soundLevelProgressBar.Minimum = scorpio.SoundLevelSensor.MinSensorVal;
-            soundLevelProgressBar.Maximum = scorpio.SoundLevelSensor.MaxSensorVal;
+            soundLevelProgressBar.Minimum = scorpio.SoundLevelSensor.MinSensorValue;
+            soundLevelProgressBar.Maximum = scorpio.SoundLevelSensor.MaxSensorValue;
             if (soundLevelProgressBar.Enabled)
             {
                 scorpio.SoundLevelSensor.OnChange += new PollingSensor<ushort>.SensorEventHandler(SoundLevelSensor_OnChange);
                 scorpio.SoundLevelSensor.StartSensing();
             }
             // sound ratio
-            soundRatioProgressBar.Minimum = (int)(scorpio.SoundRatioSensor.MinSensorVal * 100.0);
-            soundRatioProgressBar.Maximum = (int)(scorpio.SoundRatioSensor.MaxSensorVal * 100.0);
+            soundRatioProgressBar.Minimum = (int)(scorpio.SoundRatioSensor.MinSensorValue * 100.0);
+            soundRatioProgressBar.Maximum = (int)(scorpio.SoundRatioSensor.MaxSensorValue * 100.0);
             if (soundRatioProgressBar.Enabled)
             {
                 scorpio.SoundRatioSensor.OnChange += new PollingSensor<double>.SensorEventHandler(SoundRatioSensor_OnChange);
                 scorpio.SoundRatioSensor.StartSensing();
             }
             // ultrasonic distance
-            ultrasonicProgressBar.Minimum = scorpio.UltrasonicSensor.MinSensorVal;
-            ultrasonicProgressBar.Maximum = scorpio.UltrasonicSensor.MaxSensorVal;
+            ultrasonicProgressBar.Minimum = scorpio.UltrasonicSensor.MinSensorValue;
+            ultrasonicProgressBar.Maximum = scorpio.UltrasonicSensor.MaxSensorValue;
             scorpio.UltrasonicSensor.OnChange += new PollingSensor<int>.SensorEventHandler(UltrasonicSensor_OnChange);
             scorpio.UltrasonicSensor.StartSensing();
             // touch
-            touchCheckBox.Checked = scorpio.TouchSensor.MinSensorVal;
+            touchCheckBox.Checked = scorpio.TouchSensor.MinSensorValue;
             scorpio.TouchSensor.OnChange += new PollingSensor<bool>.SensorEventHandler(TouchSensor_OnChange);
             scorpio.TouchSensor.StartSensing();
             // Motors:
@@ -217,7 +217,7 @@ namespace NxtControlTestWindow
                 && scorpio.MotorLeft.IsRunning && scorpio.MotorRight.IsRunning
                 && e.SensorVal < COLLISION_DIST && previousUltrasonicValue < COLLISION_DIST)
             {
-                // TODOnow Create complex behavior to handle random turn+walk away
+                // TODOnow! Create complex behavior to handle random turn+walk away, smooth distance changes out (moving average filter http://en.wikipedia.org/wiki/Moving_average)
                 // for now, just walk back
                 checkBoxRightReverse.Checked = checkBoxLeftReverse.Checked = true;
 

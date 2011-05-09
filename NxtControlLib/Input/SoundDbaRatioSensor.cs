@@ -12,13 +12,13 @@ namespace nSt.NxtControlLib.Input
     /// </summary>
     public class SoundDbaRatioSensor : PollingSensor<double>
     {
-        public override double MaxSensorVal { get { return 1.0; } }
-        public override double MinSensorVal { get { return 0.0; } }
+        public override double MaxSensorValue { get { return 1.0; } }
+        public override double MinSensorValue { get { return 0.0; } }
 
 
         public SoundDbaRatioSensor(INxtBrick nxtBrick, NxtBrick.Sensor sensor)
             : base(nxtBrick, sensor)
-        { TimeRes = TimeSpan.FromMilliseconds(300); }
+        { TimeResolution = TimeSpan.FromMilliseconds(300); }
         
 
         public override void InitSensor()
@@ -42,11 +42,11 @@ namespace nSt.NxtControlLib.Input
 
         protected override bool ValueChanged(double previousVal, double newVal)
         {
-            if (ValResPercent < 1)
+            if (ValueResolutionPercentage < 1)
                 return newVal != previousVal;
 
-            return (newVal > (previousVal * (100.0 + ValResPercent)) / 100.0
-                    || newVal < (previousVal * (100.0 - ValResPercent)) / 100.0);
+            return (newVal > (previousVal * (100.0 + ValueResolutionPercentage)) / 100.0
+                    || newVal < (previousVal * (100.0 - ValueResolutionPercentage)) / 100.0);
         }
 
 

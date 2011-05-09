@@ -17,7 +17,7 @@ namespace nSt.NxtControlLib
     // TODO use NxtStatusSensor.Connection to update status bar with "disconnected"/"connected" captions
     // TODO create boolean Properties for each sensor/motor/behavior, acting as stop/start switches
     
-    public class Scorpio1 : IDisposable
+    public class Scorpio : IDisposable
     {
         public string Name { get { return "Scorpio V1"; } }
 
@@ -41,7 +41,7 @@ namespace nSt.NxtControlLib
 
         
 
-        public Scorpio1()
+        public Scorpio()
             : this(string.Empty)
         { }
 
@@ -49,7 +49,7 @@ namespace nSt.NxtControlLib
         /// This is where all sensor and motor properties are initialized
         /// </summary>
         /// <param name="bluetoothPortName"></param>
-        public Scorpio1(string bluetoothPortName)
+        public Scorpio(string bluetoothPortName)
         {
             Brick = new AForgeNxtBrickFacade();
             BluetoothPortName = bluetoothPortName;

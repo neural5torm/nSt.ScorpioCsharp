@@ -12,8 +12,8 @@ using nSt.NxtControlLib.Exceptions;
 namespace nSt.NxtControlLib.Input
 {
     // TODOlater: add forSeconds param like in Walk() methods (and possibly, raise Stop events)
-    public abstract class PollingSensor<TSensorVal> : IDisposable
-        where TSensorVal : struct
+    public abstract class PollingSensor<TSensorValue> : IDisposable
+        where TSensorValue : struct
     {
         protected const ushort MAX_NORMALIZED = 1023;
 
@@ -25,25 +25,25 @@ namespace nSt.NxtControlLib.Input
         protected Task SensorPoller { get; private set; }
         private volatile CancellationTokenSource cancellation;
 
-        private volatile IList<TSensorVal> sensorValues;
+        private volatile IList<TSensorValue> sensorValues;
 
         /// <summary>
         /// Time resolution between two pollings
         /// </summary>
-        public TimeSpan TimeRes { get; protected set; }
-        public readonly TimeSpan DefaultTimeRes = TimeSpan.FromMilliseconds(100);
+        public TimeSpan TimeResolution { get; protected set; }
+        public readonly TimeSpan DefaultTimeResolution = TimeSpan.FromMilliseconds(100);
 
         /// <summary>
         /// Value resolution: finest value change (in natural number percentage) for firing an OnChange event
         /// (any value resolution less than 1 means all changes are notified)
         /// </summary>
-        public int ValResPercent { get; protected set; }
-        public readonly int DefaultValRes = 10;
+        public int ValueResolutionPercentage { get; protected set; }
+        public readonly int DefaultValueResolution = 10;
 
-        public abstract TSensorVal MaxSensorVal { get; }
-        public abstract TSensorVal MinSensorVal { get; }
+        public abstract TSensorValue MaxSensorValue { get; }
+        public abstract TSensorValue MinSensorValue { get; }
 
-        public delegate void SensorEventHandler(object sender, SensorEventArgs<TSensorVal> e);
+        public delegate void SensorEventHandler(object sender, SensorEventArgs<TSensorValue> e);
         public event SensorEventHandler OnChange;
 
 
@@ -53,31 +53,31 @@ namespace nSt.NxtControlLib.Input
             Brick = nxtBrick;
             Sensor = sensor;
 
-            TimeRes = DefaultTimeRes;
-            ValResPercent = DefaultValRes;
+            TimeResolution = DefaultTimeResolution;
+            ValueResolutionPercentage = DefaultValueResolution;
         }
 
         public abstract void InitSensor();
 
 
-        public abstract bool GetValue(out TSensorVal value);
+        public abstract bool GetValue(out TSensorValue value);
 
 
         /// <summary>
         /// Starts retrieving all sensor values (no value filtering)
         /// </summary>
-        public void StartGettingValues() { StartGettingValues(TimeRes); }
+        public void StartGettingValues() { StartGettingValues(TimeResolution); }
 
-        public void StartGettingValues(TimeSpan timeRes)
+        public void StartGettingValues(TimeSpan timeResolution)
         {
             if (IsSensing())
                 return; // TODOlater throw exception?
 
             InitSensor();
 
-            TimeRes = timeRes;
+            TimeResolution = timeResolution;
             cancellation = new CancellationTokenSource();
-            sensorValues = new List<TSensorVal>();
+            sensorValues = new List<TSensorValue>();
 
             SensorPoller = Task.Factory.StartNew(() =>
                            {
@@ -85,11 +85,11 @@ namespace nSt.NxtControlLib.Input
                                {
                                    for (; ; )
                                    {
-                                       TSensorVal value;
+                                       TSensorValue value;
                                        if (GetValue(out value))
                                            sensorValues.Add(value);
 
-                                       Thread.Sleep(TimeRes);
+                                       Thread.Sleep(TimeResolution);
                                        cancellation.Token.ThrowIfCancellationRequested();
                                    }
                                }
@@ -105,13 +105,13 @@ namespace nSt.NxtControlLib.Input
                            cancellation.Token);
         }
 
-        public IList<TSensorVal> StopGettingValues()
+        public IList<TSensorValue> StopGettingValues()
         {
             if (!IsSensing() || sensorValues == null)
                 throw new NxtControlException(Name, "Could not stop getting: no list of sensor values being stored or incompatible event-driven sensing task in progress");
 
             cancellation.Cancel();
-            SensorPoller.Wait(TimeRes.Add(TimeRes));
+            SensorPoller.Wait(TimeResolution.Add(TimeResolution));
             SensorPoller = null;
 
             var retValues = sensorValues;
@@ -120,13 +120,13 @@ namespace nSt.NxtControlLib.Input
         }
 
 
-        public void StartSensing() { StartSensing(TimeRes); }
+        public void StartSensing() { StartSensing(TimeResolution); }
 
-        public void StartSensing(TimeSpan timeRes) { StartSensing(timeRes, ValResPercent); }
+        public void StartSensing(TimeSpan timeResolution) { StartSensing(timeResolution, ValueResolutionPercentage); }
 
-        public void StartSensing(int valRes) { StartSensing(TimeRes, valRes); }
+        public void StartSensing(int valueResolution) { StartSensing(TimeResolution, valueResolution); }
 
-        public void StartSensing(TimeSpan timeRes, int valRes)
+        public void StartSensing(TimeSpan timeResolution, int valueResolution)
         {
             if (IsSensing())
                 return; // TODOlater throw exception? 
@@ -134,16 +134,16 @@ namespace nSt.NxtControlLib.Input
             InitSensor();
 
             // Store the default TimeRes as set by the passed parameter
-            TimeRes = timeRes;
-            ValResPercent = valRes;
+            TimeResolution = timeResolution;
+            ValueResolutionPercentage = valueResolution;
             cancellation = new CancellationTokenSource();
 
             SensorPoller = Task.Factory.StartNew(() =>
                            {
                                try
                                {
-                                   TSensorVal previousVal = default(TSensorVal);
-                                   TSensorVal sensorVal;
+                                   TSensorValue previousVal = default(TSensorValue);
+                                   TSensorValue sensorVal;
 
                                    for (; ; )
                                    {
@@ -152,14 +152,14 @@ namespace nSt.NxtControlLib.Input
                                        var ok = GetValue(out sensorVal);                                       
                                        if (ok && ValueChanged(previousVal, sensorVal))
                                        {
-                                           RaiseEventOnMainThread(OnChange, this, new SensorEventArgs<TSensorVal>(sensorVal));
+                                           RaiseEventOnMainThread(OnChange, this, new SensorEventArgs<TSensorValue>(sensorVal));
                                            previousVal = sensorVal;
                                        }
 
                                        // sleep for the necessary amount of time
                                        DateTime postDate = DateTime.Now;
-                                       TimeSpan timeResRemainder = TimeRes - (postDate - preDate);
-                                       Thread.Sleep((int)Math.Max(timeResRemainder.TotalMilliseconds, DefaultTimeRes.TotalMilliseconds));                                       
+                                       TimeSpan intervalRemainder = TimeResolution - (postDate - preDate);
+                                       Thread.Sleep((int)Math.Max(intervalRemainder.TotalMilliseconds, DefaultTimeResolution.TotalMilliseconds));                                       
 
                                        cancellation.Token.ThrowIfCancellationRequested();
                                    }
@@ -176,7 +176,7 @@ namespace nSt.NxtControlLib.Input
                            cancellation.Token);
         }
 
-        protected abstract bool ValueChanged(TSensorVal previousVal, TSensorVal newVal);
+        protected abstract bool ValueChanged(TSensorValue previousVal, TSensorValue newVal);
 
         /// <summary>
         /// By itowlson, http://stackoverflow.com/questions/1698889/raise-events-in-net-on-the-main-ui-thread
@@ -210,7 +210,7 @@ namespace nSt.NxtControlLib.Input
                 throw new NxtControlException(Name, "Could not stop sensing: no event-driven sensing task started or incompatible list of sensor values storing task in progress");
 
             cancellation.Cancel();
-            SensorPoller.Wait(TimeRes.Add(TimeRes));
+            SensorPoller.Wait(TimeResolution.Add(TimeResolution));
             SensorPoller = null;
         }
 
